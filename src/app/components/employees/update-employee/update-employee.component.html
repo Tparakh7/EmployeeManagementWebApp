@@ -1,0 +1,63 @@
+<div class="container">
+  <h3 style="text-align: center" class="mb-4">Update Employee</h3>
+  <form [formGroup]="updateEmployeeForm">
+    <div class="col-12">
+      <div class="mb-3">
+        <label for="employeeName" class="form-label">Employee Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="employeeName"
+          formControlName="employeeName"
+          placeholder="Employee Name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="employeeEmail" class="form-label">Employee Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="employeeEmail"
+          formControlName="employeeEmail"
+          placeholder="Employee Email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="employeePhone" class="form-label">Employee Phone</label>
+        <input
+          type="number"
+          class="form-control"
+          id="employeePhone"
+          formControlName="employeePhone"
+          placeholder="Employee Phone"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="employeeAddress" class="form-label">Employee Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="employeeAddress"
+          formControlName="employeeAddress"
+          placeholder="Employee Address"
+        />
+      </div>
+      <div>
+        <button
+          type="button"
+          (click)="updateEmployee(updateEmployeeForm.value)"
+          class="btn btn-primary"
+        >
+          Update</button
+        >&nbsp;
+        <button
+          type="button"
+          (click)="routeToEmployeeList()"
+          class="btn btn-danger"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
